@@ -33,7 +33,17 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                     message: 'Pong!'
                 });
             break;
-            // Just add any case commands if you want to..
+                
+            args = args.splice(1);
+        switch(cmd) {
+            // !Hello!
+            case 'Hello':
+                bot.sendMessage({
+                    to: channelID,
+                    message: 'Hi!'
+                });
+            break;
+                    // Just add any case commands if you want to..
          }
      }
 });
